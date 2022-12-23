@@ -1,0 +1,10 @@
+{
+  "members": {
+    "host": "hostName",
+    "viewers": {
+      "user1": "value1",
+      "user2": "value2",
+      "user3": "value3"
+    }
+  }
+}

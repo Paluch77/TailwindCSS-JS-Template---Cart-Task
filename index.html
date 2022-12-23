@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="/dist/output.css" rel="stylesheet" />
+</head>
+
+<body class="font-roboto text-headergray">
+    <header class="w-screen">
+        <nav class="bg-headergray h-28">
+            <section class="flex justify-center space-x-4 pt-2">
+                <div class="flex justify-center items-center cursor-pointer">
+                    <img class="w-4 h-4 mx-2 contrast-50" src="./icons/phone.png" />
+
+                    <p class="">+2 95 01 88 821</p>
+                </div>
+                <div class="flex justify-center items-center cursor-pointer">
+                    <img class="w-4 h-4 mx-2 contrast-50" src="./icons/email.png" />
+                    <p>info@domain.com</p>
+                </div>
+            </section>
+            <section class="flex justify-center items-center pt-6">
+                <ul class="flex">
+                    <li
+                        class="w-10 h-10 flex items-center justify-center rounded-sm group hover:bg-blue-500 duration-500 mx-2">
+                        <img class="w-4 h-4 group-hover:invert duration-500 contrast-50" src="./icons/facebook.png" />
+                    </li>
+                    <li
+                        class="w-10 h-10 flex items-center justify-center rounded-sm group hover:bg-blue-300 duration-500 mx-2">
+                        <img class="w-4 h-4 group-hover:invert duration-500 contrast-50" src="./icons/twitter.png" />
+                    </li>
+                    <li
+                        class="w-10 h-10 flex items-center justify-center rounded-sm group hover:bg-orange-600 duration-500 mx-2">
+                        <img class="w-4 h-4 group-hover:invert duration-500 contrast-50" src="./icons/linkedin.png" />
+                    </li>
+                    <li
+                        class="w-10 h-10 flex items-center justify-center rounded-sm group hover:bg-blue-400 duration-500 mx-2">
+                        <img class="w-4 h-4 group-hover:invert duration-500 contrast-50" src="./icons/worldwide.png" />
+                    </li>
+                    <li
+                        class="w-10 h-10 flex items-center justify-center rounded-sm group hover:bg-red-600 duration-500 mx-2">
+                        <img class="w-4 h-4 group-hover:invert duration-500 contrast-50"
+                            src="./icons/google-plus-logo.png" />
+                    </li>
+                </ul>
+            </section>
+        </nav>
+        <section class="flex flex-col justify-center items-center pt-10">
+            <img class="w-25 h-15" src="./icons/companylogo.png" />
+
+            <div class="my-6 flex">
+                <div class="relative">
+                    <button id="underlogo__firstmenu"
+                        class="border-solid border-2 px-6 mx-2 duration-300 hover:bg-orange-400 hover:border-orange-400 hover:text-white">
+                        USA
+                    </button>
+                    <ul id="firstmenu__list"
+                        class="hidden bg-white z-10 absolute top-100% rounded-lg left-0 ml-2 mt-1 border-2 border-solid py-2 w-44 flex items-center flex-col text-lg">
+                        <li class="w-full flex justify-center">
+                            <p class="hover:bg-orange-400 w-full text-center duration-300">
+                                Canada
+                            </p>
+                        </li>
+                        <li class="w-full flex justify-center">
+                            <p class="hover:bg-orange-400 w-full text-center duration-300">
+                                USA
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="relative">
+                    <button id="underlogo__secondmenu"
+                        class="border-solid border-2 px-6 mx-2 duration-300 hover:bg-orange-400 hover:border-orange-400 hover:text-white">
+                        DOLLAR
+                    </button>
+                    <ul id="secondmenu__list"
+                        class="hidden bg-white z-10 absolute top-100% rounded-lg left-0 ml-2 mt-1 border-2 border-solid py-2 w-44 flex items-center flex-col text-lg">
+                        <li class="w-full flex justify-center">
+                            <p class="hover:bg-orange-400 w-full text-center duration-300">
+                                Pound
+                            </p>
+                        </li>
+                        <li class="w-full flex justify-center">
+                            <p class="hover:bg-orange-400 w-full text-center duration-300">
+                                Canadian Dollar
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <nav>
+                <ul class="flex justify-center items-center space-x-4 px-4">
+                    <li class="flex justify-center items-center group hover:text-orange-400 duration-300">
+                        <img class="w-4 h-4 mr-1 contrast-50 group-hover:orangefilter duration-300"
+                            src="./icons/user.png" />
+                        <p>Account</p>
+                    </li>
+                    <li class="flex justify-center items-center group hover:text-orange-400 duration-300">
+                        <img class="w-4 h-4 mr-1 contrast-50 group-hover:orangefilter duration-300"
+                            src="./icons/star.png" />
+                        <p>Wishlist</p>
+                    </li>
+                    <li class="flex justify-center items-center group hover:text-orange-400 duration-300">
+                        <img class="w-4 h-4 mr-1 contrast-50 group-hover:orangefilter duration-300"
+                            src="./icons/target.png" />
+                        <p>Checkout</p>
+                    </li>
+                    <li class="flex justify-center items-center group hover:text-orange-400 duration-300">
+                        <img class="w-4 h-4 mr-1 contrast-50 group-hover:orangefilter duration-300"
+                            src="./icons/shopping-cart.png" />
+                        <p>Cart</p>
+                    </li>
+                    <li class="flex justify-center items-center group hover:text-orange-400 duration-300">
+                        <img class="w-4 h-4 mr-1 contrast-50 group-hover:orangefilter duration-300"
+                            src="./icons/lock.png" />
+                        <p>Login</p>
+                    </li>
+                </ul>
+            </nav>
+        </section>
+        <section class="w-screen h-20 flex justify-between items-center px-4">
+            <div class=" ">
+                <input
+                    class="w-full h-10 border-2 placeholder:pl-2 rounded-sm pl-2 bg-loupe bg-no-repeat bg-right1rem bg-10% bg-headergray"
+                    type="text" placeholder="Search" />
+            </div>
+            <div id="header__burgermenu" class="relative cursor-pointer">
+                <img class="w-10 h-10" src="./icons/menu.png" />
+            </div>
+        </section>
+        <section class="w-full h-auto">
+            <div id="burgermenu__list" class="w-screen overflow-hidden h-0 duration-500 px-4">
+                <ul class="p-4 text-2xl bg-stone-400 font-thin text-white space-y-2">
+                    <li>
+                        <a class="cursor-pointer hover:text-orange-500 duration-300">Home</a>
+                    </li>
+                    <li>
+                        <a class="cursor-pointer hover:text-orange-500 duration-300">Shop</a>
+                    </li>
+                    <li>
+                        <a class="cursor-pointer hover:text-orange-500 duration-300">Blog</a>
+                    </li>
+                    <li>
+                        <a class="cursor-pointer hover:text-orange-500 duration-300">404</a>
+                    </li>
+                    <li>
+                        <a class="cursor-pointer hover:text-orange-500 duration-300">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </header>
+    <main>
+        <section class="py-6">
+            <div class="w-screen h-6 flex justify-center items-center px-4">
+                <div class="h-[0.2rem] grow bg-headergray"></div>
+                <p class="px-4 text-orange-500 font-bold text-xl">CATEGORY</p>
+                <div class="h-[0.2rem] grow bg-headergray"></div>
+            </div>
+            <ul id="categories__list" class="mx-4 my-8 p-4 border-2 space-y-2 text-lg"></ul>
+        </section>
+
+        <section class="">
+            <div class="w-screen h-6 flex justify-center items-center px-4">
+                <div class="h-[0.2rem] grow bg-headergray"></div>
+                <p class="px-4 text-orange-500 font-bold text-xl">BRANDS</p>
+                <div class="h-[0.2rem] grow bg-headergray"></div>
+            </div>
+            <ul id="brands__list" class="mx-4 my-8 p-4 border-2 space-y-2 text-lg"></ul>
+        </section>
+        <section class="mx-4">
+            <img src="./icons/shippingPhoto.png" />
+        </section>
+        <section class="py-6">
+            <div class="w-screen h-6 flex justify-center items-center px-4 ">
+                <div class="h-[0.2rem] grow bg-headergray"></div>
+                <p class="px-4 text-orange-500 font-bold text-xl">FEATURED ITEMS</p>
+                <div class="h-[0.2rem] grow bg-headergray"></div>
+            </div>
+            <div id="products" class=""></div>
+        </section>
+        <section class="w-[95%] m-auto my-6" id="chose__menu">
+            <ul id="item__options" class="h-auto text-lg font-thin bg-optionmenu text-optionmenutext">
+                <li id="tshirt" class="hover:bg-orangediff hover:text-white p-4 z-10 duration-300">
+                    T-SHIRT
+                </li>
+                <li id="blazers" class="hover:bg-orangediff hover:text-white p-4 z-10 duration-300">
+                    BLAZERS
+                </li>
+                <li id="sunglass" class="hover:bg-orangediff hover:text-white p-4 z-10 duration-300">
+                    SUNGLASS
+                </li>
+            </ul>
+            <div id="chosenoption__items" class="opacity-100">
+                <div id="items__list" class="opacity-0"></div>
+            </div>
+        </section>
+    </main>
+    <footer class="bg-footerbg w-screen m-auto h-auto text-textgray">
+        <div id="footer_top" class="w-[95%] m-auto">
+            <div class="text-center pt-16">
+                <h1 class="text-3xl">
+                    <span class="text-orangediff">E</span>-SHOPER
+                </h1>
+                <h4 class="text-sm pt-2">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit,sed do
+                    eiusmod tempor
+                </h4>
+            </div>
+            <div class="grid grid-cols-2 gap-y-4 py-6">
+                <div class="flex flex-col justify-center items-center">
+                    <div class="relative w-[80%] border-2 group">
+                        <img class="w-full" src="./icons/footer/1.png" />
+                        <div
+                            class="w-full h-full top-0 absolute bg-orangediff z-10 opacity-0 group-hover:opacity-100 duration-500 flex justify-center items-center">
+                            <img class="w-6 h-6 invert" src="./icons/footer/play.png" />
+                        </div>
+                    </div>
+                    <p class="">Circle of Hands</p>
+                    <p class="font-thin leading-none">24 DEC 2014</p>
+                </div>
+                <div class="flex flex-col justify-center items-center">
+                    <div class="relative w-[80%] border-2 group">
+                        <img class="w-full" src="./icons/footer/2.png" />
+                        <div
+                            class="w-full h-full top-0 absolute bg-orangediff z-10 opacity-0 group-hover:opacity-100 duration-500 flex justify-center items-center">
+                            <img class="w-6 h-6 invert" src="./icons/footer/play.png" />
+                        </div>
+                    </div>
+                    <p class="">Circle of Hands</p>
+                    <p class="font-thin leading-none">24 DEC 2014</p>
+                </div>
+                <div class="flex flex-col justify-center items-center">
+                    <div class="relative w-[80%] border-2 group">
+                        <img class="w-full" src="./icons/footer/3.png" />
+                        <div
+                            class="w-full h-full top-0 absolute bg-orangediff z-10 opacity-0 group-hover:opacity-100 duration-500 flex justify-center items-center">
+                            <img class="w-6 h-6 invert" src="./icons/footer/play.png" />
+                        </div>
+                    </div>
+                    <p class="">Circle of Hands</p>
+                    <p class="font-thin leading-none">24 DEC 2014</p>
+                </div>
+                <div class="flex flex-col justify-center items-center">
+                    <div class="relative w-[80%] border-2 group">
+                        <img class="w-full" src="./icons/footer/4.png" />
+                        <div
+                            class="w-full h-full top-0 absolute bg-orangediff z-10 opacity-0 group-hover:opacity-100 duration-500 flex justify-center items-center">
+                            <img class="w-6 h-6 invert" src="./icons/footer/play.png" />
+                        </div>
+                    </div>
+                    <p class="">Circle of Hands</p>
+                    <p class="font-thin leading-none">24 DEC 2014</p>
+                </div>
+            </div>
+            <div id="map" class="py-6 flex justify-center items-center border-b-1">
+                <img class="relative w-screen" src="./icons/footer/map.png" />
+                <p class="absolute text-headergray font-thin">
+                    505 S Atlantic Ave Virginia Beach, VA(Virginia)
+                </p>
+            </div>
+        </div>
+        <div id="footer__mid">
+            <div class="w-[95%] m-auto px-4 grid grid-cols-2 justify-center items-center">
+                <div class="">
+                    <h1 class="text-[20px] text-headergray py-6">SERVICE</h1>
+                    <ul class="space-y-1 text-lg font-thin [&>*:hover]:text-orangediff [&>*]:duration-500">
+                        <li>Online Help</li>
+                        <li>Contact Us</li>
+                        <li>Order Status</li>
+                        <li>Change Location</li>
+                        <li>FAQ`s</li>
+                    </ul>
+                </div>
+                <div class="">
+                    <h1 class="text-[20px] text-headergray py-6">QUOCK SHOP</h1>
+                    <ul class="space-y-1 text-lg font-thin [&>*:hover]:text-orangediff [&>*]:duration-500">
+                        <li>T-Shirt</li>
+                        <li>Mens</li>
+                        <li>Womens</li>
+                        <li>Gift Cards</li>
+                        <li>Shoes</li>
+                    </ul>
+                </div>
+                <div class="">
+                    <h1 class="text-[20px] text-headergray py-6">POLICIES</h1>
+                    <ul class="space-y-1 text-lg font-thin [&>*:hover]:text-orangediff [&>*]:duration-500">
+                        <li>Terms of Use</li>
+                        <li>Privacy Policy</li>
+                        <li>Refund Policy</li>
+                        <li>Billing System</li>
+                        <li>Ticket System</li>
+                    </ul>
+                </div>
+                <div class="">
+                    <h1 class="text-[20px] text-headergray py-6">ABOUT SHOPPER</h1>
+                    <ul class="space-y-1 text-lg font-thin [&>*:hover]:text-orangediff [&>*]:duration-500">
+                        <li>Company Information</li>
+                        <li>Careers</li>
+                        <li>Store Location</li>
+                        <li>Affiliate Program</li>
+                        <li>Copyright</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="w-[95%] m-auto py-6 px-4">
+                <p class="text-headergray text-[20px] py-4">ABOUT SHOPPER</p>
+                <div>
+                    <input class="w-60 border-l-[1px] border-t-[1px] border-b-[1px] border-headergray pl-2 h-10"
+                        type="text" placeholder="Your email address" /><button
+                        class="w-14 h-10 bg-orangediff text-center text-white border-[1px] border-orangediff">
+                        >
+                    </button>
+                </div>
+                <p class="w-64 py-4">
+                    Get the most recent updates from our site and be updated your
+                    self...
+                </p>
+            </div>
+        </div>
+        <div id="footer__last" class="w-screen h-20 bg-footerlast text-center">
+            <p class="text-black font-thin pt-4">
+                Copyright © 2013 E-SHOPPER Inc. All rights reserved.
+            </p>
+            <p class="text-black font-thin">
+                Designed by
+                <span class="text-orangediff italic underline cursor-pointer">Themeum</span>
+            </p>
+        </div>
+        <div id="cart_list" class="w-[95%] h-auto  m-auto my-6 pb-6">
+            <table id="cart__table" class="w-full border-2 "></table>
+        </div>
+    </footer>
+
+    <script src="./index.js" type="module"></script>
+</body>
+
+</html>

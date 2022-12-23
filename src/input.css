@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .orangefilter {
+    filter: invert(55%) sepia(29%) saturate(5825%) hue-rotate(352deg)
+      brightness(102%) contrast(90%);
+  }
+  .cartinvert {
+    /* background-image: url("../icons/shopping-cart.png"); */
+    filter: invert(100%);
+  }
+
+  .menu {
+    height: 230px;
+  }
+  .menu0 {
+    height: 0;
+  }
+}
