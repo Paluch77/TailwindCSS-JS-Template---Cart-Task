@@ -217,9 +217,9 @@ json.products.forEach((product) => {
   let productForm = document.createElement("div");
 
   productForm.innerHTML = `
-    <div id="product1" class="relative h-[550px] group flex justify-center mb-4 group">
+    <div id="product1" class="relative h-[550px] group flex justify-center group">
     <div
-        class=" absolute w-[95%] overflow-hidden group-hover:h-[550px] h-0 top-0 flex invisible group-hover:visible justify-center items-end bg-productHover duration-1000 border-2 text-center m-4 z-10 ">
+        class=" absolute w-[95%] overflow-hidden group-hover:h-[550px] h-0 top-0 flex invisible group-hover:visible justify-center items-end bg-productHover duration-1000 border-2 text-center z-10">
         <div id="buttonBuy"
             class="${
               product.name
@@ -236,7 +236,7 @@ json.products.forEach((product) => {
     <div id="basic__info " 
         class="${
           product.name
-        } absolute w-[95%] h-[550px] mb-16 top-0 flex flex-col justify-start items-center border-2 m-4">
+        } absolute w-[95%] h-[550px] mb-16 top-0 flex flex-col justify-start items-center border-2">
         ${
           product.sale
             ? '<img class="absolute right-0 top-0" src="./icons/sale.png">'
@@ -253,7 +253,7 @@ json.products.forEach((product) => {
         </div>
     </div>
 </div>
-<div id="options" class="border-b-2 border-r-2 border-l-2 w-[95%] mx-auto py-4">
+<div id="options" class="border-b-2 border-r-2 border-l-2 w-[95%] mx-auto py-4 mb-4">
     <div class="flex justify-center items-center space-x-2 group duration-300">
         <img class="w-4 h-4  group-hover:orangefilter duration-100" src="./icons/plus-icon.png">
         <p class=" group-hover:orangefilter duration-100">Add to wishlist</p>
@@ -392,7 +392,7 @@ const onLoad = () => {
       data.productData.name
     } w-full text-headergray bg-white h-36 max-h-36 border-b-2 border-r-2 border-l-2">
                     <th class="h-36 flex items-center ">
-                        <img class="w-1/2 h-1/2" src="${
+                        <img class="w-1/2 h-2/3" src="${
                           data.productData.photo
                         }">
                         <p class="w-1/2 text-[.8rem]">${data.productData.description}</p>
