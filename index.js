@@ -1,4 +1,4 @@
-let json = {
+const json = {
   categories: [
     "SPORTSWEAR",
     "MENS",
@@ -217,13 +217,13 @@ json.products.forEach((product) => {
   let productForm = document.createElement("div");
 
   productForm.innerHTML = `
-    <div id="product1" class="relative h-[550px] group flex justify-center group">
+    <div class="relative h-[550px] group flex justify-center group">
     <div
         class=" absolute w-[95%] overflow-hidden group-hover:h-[550px] h-0 top-0 flex invisible group-hover:visible justify-center items-end bg-productHover duration-1000 border-2 text-center z-10">
-        <div id="buttonBuy"
+        <div
             class="${
               product.name
-            } absolute flex flex-col justify-center items-center  mb-8 duration-500 z-20">
+            } buttonBuy absolute flex flex-col justify-center items-center  mb-8 duration-500 z-20">
             <p class=" py-2 text-3xl font-bold text-white">${product.price}</p>
             <p class="text-white py-4 text-lg">${product.description}</p>
             <div
@@ -233,7 +233,7 @@ json.products.forEach((product) => {
             </div>
         </div>
     </div>
-    <div id="basic__info " 
+    <div 
         class="${
           product.name
         } absolute w-[95%] h-[550px] mb-16 top-0 flex flex-col justify-start items-center border-2">
@@ -280,12 +280,12 @@ const changeOutput = (chosenOption) => {
   let products = "";
   data.forEach((elem) => {
     products += `<div class="my-12">
-        <div id="product" class="w-full h-auto border-2 flex flex-col justify-center items-center">
+        <div class="w-full h-auto border-2 flex flex-col justify-center items-center">
             <img class=" w-screen px-4 my-4" src="${elem.photo}">
             <p class="text-orange-500 py-2 text-3xl font-bold">${elem.price}</p>
             <p>${elem.description}</p>
-            <div id="buttonBuy"
-                class=" ${elem.name} flex space-x-2 items-center w-40 justify-center bg-buttoncolor py-1 px-6 my-4 group  hover:bg-orangediff duration-300">
+            <div 
+                class="buttonBuy ${elem.name} flex space-x-2 items-center w-40 justify-center bg-buttoncolor py-1 px-6 my-4 group  hover:bg-orangediff duration-300">
                 <div
                     class="bg-cart w-4 h-4 bg-no-repeat bg-contain group-hover:invert duration-300 group-hover:contrast-100 contrast-50">
                 </div>
@@ -367,7 +367,7 @@ let cartParsed = JSON.parse(sessionStorage.getItem("cart"));
 
 let cart = { ...cartParsed };
 
-const buyButtons = document.querySelectorAll("#buttonBuy");
+const buyButtons = document.querySelectorAll('.buttonBuy')
 let cartTable = document.querySelector("#cart__table");
 
 let cartList = "";
@@ -481,7 +481,7 @@ const buttonsListeners = () => {
 buttonsListeners();
 
 const observer = new MutationObserver(() => {
-  const buyButtons = document.querySelectorAll("#buttonBuy");
+  const buyButtons = document.querySelectorAll('.buttonBuy')
   buyButtons.forEach(button => button.removeEventListener)
   
   buyButtons.forEach((button) => {
