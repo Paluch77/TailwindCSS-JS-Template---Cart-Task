@@ -456,8 +456,7 @@ const buttonsListeners = () => {
   const buyButtons = document.querySelectorAll(".buttonBuy");
 
   buyButtons.forEach((button) => {
-    button.removeEventListener;
-    button.addEventListener("click", (e) => {
+    button.addEventListener("click", () => {
       const name = Object.values(button.classList).filter((elem) =>
         elem.includes("product")
       );
