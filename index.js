@@ -189,8 +189,6 @@ burgerMenuButton.addEventListener("click", () => {
     burgerMenuList.style.height === "230px" ? "0px" : "230px";
 });
 
-
-
 // Categories and brands
 const categoriesList = document.querySelector("#categories__list");
 
@@ -297,11 +295,11 @@ const changeOutput = (chosenOption) => {
   });
   product.innerHTML = products;
   divForInput.appendChild(product);
-  
+
   setTimeout(() => {
     divForInput.classList.add("opacity-100");
     divForInput.classList.add("duration-300");
-    divForInput.classList.remove('opacity-0')
+    divForInput.classList.remove("opacity-0");
   }, 500);
 };
 
@@ -326,11 +324,11 @@ options.forEach((option) => {
     if (divForInput.classList.contains("opacity-100")) {
       divForInput.classList.remove("opacity-100");
       divForInput.classList.remove("duration-300");
-      divForInput.classList.add('opacity-0')
+      divForInput.classList.add("opacity-0");
     }
     active.set(option.id, true);
     changeOutput(option.id);
-    
+
     active.forEach((value, key) => {
       if (!(key == option.id)) {
         active.set(key, false);
@@ -343,7 +341,6 @@ options.forEach((option) => {
     });
   });
 });
-
 
 const body = document.querySelector("body");
 body.addEventListener("click", (e) => {
@@ -366,7 +363,6 @@ body.addEventListener("click", (e) => {
 let cartParsed = JSON.parse(sessionStorage.getItem("cart"));
 
 let cart = { ...cartParsed };
-
 
 let cartTable = document.querySelector("#cart__table");
 
@@ -395,7 +391,9 @@ const onLoad = () => {
                         <img class="w-1/2 h-2/3" src="${
                           data.productData.photo
                         }">
-                        <p class="w-1/2 text-[.8rem]">${data.productData.description}</p>
+                        <p class="w-1/2 text-[.8rem]">${
+                          data.productData.description
+                        }</p>
                     </th>
                     <th class="w-1/5">${data.productData.price}</th>
                     <th class="product__info">
@@ -440,9 +438,9 @@ const onLoad = () => {
     });
     minus.addEventListener("click", () => {
       cart[name].quantity -= 1;
-      if(cart[name].quantity == 0) {
-        delete cart[name]
-        onLoad()
+      if (cart[name].quantity == 0) {
+        delete cart[name];
+        onLoad();
       } else {
         sum.textContent = `${
           parseInt(cart[name].productData.price) * parseInt(cart[name].quantity)
@@ -450,42 +448,40 @@ const onLoad = () => {
         quantity.value = cart[name].quantity;
         sessionStorage.setItem("cart", JSON.stringify(cart));
       }
-
-
     });
   });
 };
 
 const buttonsListeners = () => {
-  const buyButtons = document.querySelectorAll('.buttonBuy')
-  buyButtons.forEach(button => button.removeEventListener)
+  const buyButtons = document.querySelectorAll(".buttonBuy");
+
   buyButtons.forEach((button) => {
-  button.addEventListener("click", (e) => {
-    const name = Object.values(button.classList).filter((elem) =>
-      elem.includes("product")
-    );
-    const productData = json.products.filter((elem) => {
-      if (elem.name == name) {
-        return elem;
+    button.removeEventListener;
+    button.addEventListener("click", (e) => {
+      const name = Object.values(button.classList).filter((elem) =>
+        elem.includes("product")
+      );
+      const productData = json.products.filter((elem) => {
+        if (elem.name == name) {
+          return elem;
+        }
+      })[0];
+      if (cart[name]) {
+        cart[name].quantity += 1;
+      } else {
+        cart[name] = { productData, quantity: 1 };
       }
-    })[0];
-    if (cart[name]) {
-      cart[name].quantity += 1;
-    } else {
-      cart[name] = { productData, quantity: 1 };
-    }
-    sessionStorage.setItem("cart", JSON.stringify(cart));
-    onLoad();
+      sessionStorage.setItem("cart", JSON.stringify(cart));
+      onLoad();
+    });
   });
-});
-}
+};
 buttonsListeners();
 
 const observer = new MutationObserver(() => {
-  buttonsListeners()
-})
+  buttonsListeners();
+});
 
-observer.observe(divForInput, {subtree: true, childList: true});
-
+observer.observe(divForInput, { subtree: true, childList: true });
 
 onLoad();
