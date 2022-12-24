@@ -367,7 +367,7 @@ let cartParsed = JSON.parse(sessionStorage.getItem("cart"));
 
 let cart = { ...cartParsed };
 
-const buyButtons = document.querySelectorAll('.buttonBuy')
+
 let cartTable = document.querySelector("#cart__table");
 
 let cartList = "";
@@ -457,6 +457,8 @@ const onLoad = () => {
 };
 
 const buttonsListeners = () => {
+  const buyButtons = document.querySelectorAll('.buttonBuy')
+  buyButtons.forEach(button => button.removeEventListener)
   buyButtons.forEach((button) => {
   button.addEventListener("click", (e) => {
     const name = Object.values(button.classList).filter((elem) =>
@@ -472,7 +474,6 @@ const buttonsListeners = () => {
     } else {
       cart[name] = { productData, quantity: 1 };
     }
-
     sessionStorage.setItem("cart", JSON.stringify(cart));
     onLoad();
   });
@@ -481,29 +482,7 @@ const buttonsListeners = () => {
 buttonsListeners();
 
 const observer = new MutationObserver(() => {
-  const buyButtons = document.querySelectorAll('.buttonBuy')
-  buyButtons.forEach(button => button.removeEventListener)
-  
-  buyButtons.forEach((button) => {
-    button.addEventListener("click", (e) => {
-      const name = Object.values(button.classList).filter((elem) =>
-        elem.includes("product")
-      );
-      const productData = json.products.filter((elem) => {
-        if (elem.name == name) {
-          return elem;
-        }
-      })[0];
-      if (cart[name]) {
-        cart[name].quantity += 1;
-      } else {
-        cart[name] = { productData, quantity: 1 };
-      }
-  
-      sessionStorage.setItem("cart", JSON.stringify(cart));
-      onLoad();
-    });
-  });
+  buttonsListeners()
 })
 
 observer.observe(divForInput, {subtree: true, childList: true});
